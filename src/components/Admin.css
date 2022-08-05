@@ -1,0 +1,129 @@
+/* main container of admin login page */
+.admin {
+  height: 100vh;
+  background: url("../components/images/bg-login.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f2ea;
+}
+/* dark mode admin page */
+.admin-dark{
+background-color: #000;
+}
+/* the form container whic actually includes all of the html */
+.admin-form-container{
+    overflow: hidden;
+    margin-top: 4em;
+    display: flex;
+    max-width: 80%;
+    height: 80%;
+padding: 2em;
+align-items: center;
+justify-content: center;
+}
+.admin-form-image{
+    width: 80%;
+
+}
+/* title texts of admin login page */
+.admin-form-title{
+    font-weight: 900;
+}
+.admin-form-subtitle{
+    font-size: 16px;
+    margin-top: 0.5em;
+    font-weight: 600;
+    max-width: 80%;
+    text-align: center;
+}
+/* actual form */
+.admin-form{
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
+    height: 400px;
+    width: 50%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em 2em 2em 2em;
+}
+.admin-form-dark{
+background-color: #161b22;
+}
+/* email and password input css*/
+.admin-email,
+.admin-pass{
+   width: 300px;
+   position: relative;
+   margin-top: 2em;
+}
+.email,
+.password{
+    width: 100%;
+    padding-left: 30px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+}
+.admin-email-icon,
+.admin-pass-icon{
+    position: absolute;
+    top: 8px;
+    left: 5px;
+    color: lightgray;
+}
+.login-btn,
+.logout-btn{
+    margin: 2em auto;
+    margin-bottom: 10px;
+    padding: 0.7em 2em;
+    border-radius: 10px;
+    border: none;
+    width: min-content;
+    background-color: #ff9933;
+    color: #fff;
+    font-weight: 600;
+}
+.logout-btn{
+    background-color: #2f0;
+
+}
+.login-btn:hover{
+    background-color: #e7821c;
+    transform: scale(0.99);
+}
+
+.logout-btn:hover{
+    background-color: rgb(30, 221, 1);
+    transform: scale(0.99);
+}
+
+
+.visibility-icon{
+    position: absolute;
+    color: rgb(131, 131, 131);
+    top: 8px;
+    right: 5px;
+}
+/* ---------mobile responsiveness--------- */
+@media (min-width:360px) and (max-width:750px) {
+    .admin-form-image-container{
+        display: none;
+    }
+    .admin-email,.admin-pass{
+        width: 100%;
+    }
+    .admin-form-container{
+        padding: 0;
+    }
+    .admin-form{
+        width: 100%;
+        box-shadow: none;
+        /* padding: 20px; */
+    }
+}

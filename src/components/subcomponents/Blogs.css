@@ -1,0 +1,44 @@
+.blogs-container{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  width: 95%;
+  margin: auto;
+ 
+}
+
+.blogs-title h1{
+  font-size: 50px;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+.blogs-title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.blogs-subtitle{
+  font-weight: 300;
+  padding-left: 0.9em;
+}
+/* ---------Mobile responsiveness--------- */
+@media (min-width:360px) and (max-width:900px) {
+  .blogs-container{
+    height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 1em;
+  }
+  .blogs-title>h1{
+    font-size: 26px;
+  }
+  .blogs-subtitle{
+    font-size: 16px;
+    /* font-weight: 600; */
+    max-width: 80%;
+    text-align: center;
+    padding: 0;
+  }
+}

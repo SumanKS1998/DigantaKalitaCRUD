@@ -1,0 +1,42 @@
+.videos-input {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  gap: 10px;
+  width: 340px;
+}
+.video-btn {
+  height: 50px;
+  width: max-content;
+  margin: auto;
+  padding: 0px 20px;
+}
+.video-container {
+  margin: 5rem 0;
+}
+.video-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  justify-items: center;
+  margin: 2rem auto;
+  gap: 20px;
+}
+.iframe-videos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.iframe-btn {
+  background-color: transparent;
+  padding: 10px 20px;
+  border: 2px solid rgb(223, 110, 110);
+  border-radius: 10px;
+  cursor: pointer;
+  color: rgb(223, 110, 110);
+}
+.iframe-btn:hover {
+  background-color: rgb(223, 110, 110);
+  color: #fff;
+}

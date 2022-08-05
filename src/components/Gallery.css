@@ -1,0 +1,139 @@
+.gallery-title{
+   margin:0 auto;
+   margin-top: 3em;
+   width: fit-content;
+    font-weight: 900;
+    font-size: 50px;
+}
+.gallery-subtitle{
+  margin: auto;
+  width: fit-content;
+  font-size: 30px;
+  font-weight: 600;
+}
+.container {
+  max-width: 85%;
+  margin: 3em auto;
+ 
+}
+
+
+.container .title {
+  font-size: 25px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 15px;
+}
+
+.container .image-container {
+  columns: 3 250px;
+  gap: 15px;
+}
+
+.container .image-container img {
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  width: 100%;
+}
+ 
+.image-box {
+  position: relative;
+  overflow: hidden;
+}
+ 
+ 
+/* loading animation */
+/* From uiverse.io by @mrhyddenn */
+.mover {
+  background: rgba(248, 25, 25, 0.979);
+  height: 10px;
+  width: 80px;
+  border-radius: 10px;
+  position: relative;
+  animation: mover5 2s ease-in-out infinite;
+  margin: 2em auto;
+}
+
+.mover::before,
+.mover::after {
+  content: '';
+  position: absolute;
+  height: 10px;
+  border-radius: 10px;
+  left: 20px;
+  animation: mover5 2s ease-in-out infinite;
+}
+
+.mover::before {
+  background: rgb(201, 1, 1);
+  top: 20px;
+  width: 50px;
+}
+
+.mover::after {
+  background: rgb(255, 116, 106);
+  top: -20px;
+  width: 60px;
+}
+/* -----------------modal component----------------- */
+.modal{
+height: 100%;
+width: 100%;
+position: absolute;
+z-index: 999;
+/* background-color: rgba(0, 0, 0, 0.156); */
+ 
+}
+.modal-image{
+  width:auto;
+  height: 100%;
+  display: block;
+  transform: translate(-50%,-50%);
+  left:50%;
+  top:50%;
+  position: fixed;
+}
+.cancel-image{
+  width:60px;
+  display: block;
+  position: fixed;
+  left: 95%;
+  top: 0%;
+  transform: translate(-50%,10%);
+}
+
+@keyframes mover5 {
+  0% {
+    transform: translateX(30px) scale(1);
+  }
+
+  50% {
+    transform: translateX(-30px) scale(1.1);
+  }
+
+  100% {
+    transform: translateX(30px) scale(1);
+  }
+}
+/* --------Mobile responsiveness-------- */
+@media (min-width:360px) and (max-width:760px) {
+  .gallery-title{
+    font-size: 26px;
+  }
+  .gallery-subtitle{
+    font-size: 16px;
+  }
+  .cancel-image{
+    display: none;
+  }
+  .modal-image{
+    width:100%
+  }
+  .modal{
+    display: none;
+  }
+}

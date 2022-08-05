@@ -1,0 +1,339 @@
+/* home page container */
+.main-home-container {
+  position: relative;
+  overflow: hidden;
+}
+/* top of the home page */
+.home-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  height: 100vh;
+}
+
+.profile-image-container {
+  animation: onLoadImage ease-in-out 1.2s;
+  z-index: 99;
+}
+@keyframes onLoadImage {
+  0% {
+    opacity: 0.1;
+    transform: translateY(40%);
+  }
+  30% {
+    opacity: 0.3;
+    transform: translateY(-5%);
+  }
+  60% {
+    opacity: 0.6;
+    transform: translateY(5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+.profile-img {
+  max-width: 400px;
+}
+
+.intro-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  z-index: 99;
+}
+.intro-title {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #ff840b;
+  animation: onLoadTitle ease-in-out 800ms;
+  overflow: hidden;
+}
+@keyframes onLoadTitle {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+.intro-subtitle {
+  font-weight: 300;
+  animation: onLoadTitle ease-in-out 1s;
+}
+
+/* buttons */
+.buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1em;
+  justify-content: center;
+}
+.about-btn {
+  width: 150px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 24px;
+  border: 1px solid #138808;
+  border-radius: 4px;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  font-size: 19px;
+  color: #138808;
+  background: none;
+  z-index: 1;
+}
+
+.about-btn:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.about-btn:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #138808;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.about-btn:hover {
+  color: #ffffff;
+  border: 1px solid #138808;
+}
+
+.about-btn:hover:before {
+  top: -35%;
+  background-color: #138808;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.about-btn:hover:after {
+  top: -45%;
+  background-color: #138808;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.blog-btn {
+  padding: 8px 27px;
+  font-size: 19px;
+  display: inline-block;
+  border: none;
+  background-color: #000;
+  transition: all 0.2s ease-in;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 4px;
+  font-size: 19px;
+  color: #fff;
+  z-index: 1;
+  width: 150px;
+}
+.blog-btn:hover {
+  border: 1px solid #ff9933;
+  background-color: #ff9933;
+  color: #ffffff;
+}
+/* social icons */
+.social-icons {
+  display: flex;
+  width: 20%;
+  margin-top: 1rem;
+  justify-content: space-evenly;
+  gap: 10px;
+  width: fit-content;
+}
+.fb,
+.insta,
+.twitter {
+  text-decoration: none !important;
+}
+.fb {
+  color: #057ec9;
+}
+.insta {
+  color: #bc2a8d;
+}
+.twitter {
+  color: #1da1f2;
+}
+
+.buttons,
+.social-icons {
+  animation: onLoadTitle ease-in-out 1.2s;
+}
+/* social media : end of the page*/
+.twitter-tab{
+  background: #1da1f2;
+  color:#fff;
+  text-align: center;
+  padding: 10px;
+  /* box-shadow: 0px 0px 5px black; */
+  border-radius: 10px;
+  margin: 10px 0
+}
+.facebook-tab{
+  background:#4267B2;
+  color:#fff;
+  text-align: center;
+  padding: 10px;
+  /* box-shadow: 0px 0px 5px black; */
+  border-radius: 10px;
+  margin: 10px 0
+}
+.social-media {
+  display: flex;
+  flex-direction: row;
+  gap:30px;
+align-items: center;
+justify-content: center;
+}
+.social-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+}
+.social-title {
+  font-size: 50px;
+}
+.social-subtitle {
+  font-weight: 300;
+}
+.social-tab {
+  border-radius: 5px;
+  border: none;
+  /* box-shadow: 0px 5px 10px black; */
+  margin: auto;
+}
+/* background svg*/
+.bg {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right:200px;
+  transform: rotate(180deg);
+}
+
+#one {
+  animation: wave infinite 8s alternate linear;
+}
+#two {
+  animation: wave infinite 8s alternate linear;
+}
+#three {
+  animation: wave infinite 7s alternate linear;
+}
+#four {
+  animation: wave infinite 6s alternate linear;
+}
+#five {
+  animation: wave infinite 5s alternate linear;
+}
+#six {
+  animation: wave infinite 4s alternate linear;
+}
+#seven {
+  animation: wave infinite 3s alternate linear;
+}
+@keyframes wave {
+  0% {
+    transform: translate(-40px, -40px);
+  }
+  300% {
+    transform: translate(40px, 40px);
+  }
+}
+
+/* --------Mobile responsiveness--------- */
+@media (min-width: 1400px) {
+  /* .bg {
+    display: none;
+  } */
+}
+@media (min-width: 340px) and (max-width: 950px) {
+  .bg {
+    display: none;
+  }
+  /* top of the home page */
+  .home-container {
+    flex-direction: column;
+    margin-top: 2rem;
+    justify-content: center;
+    gap: 1em;
+  }
+  .profile-image-container {
+    animation: levitating 2s infinite alternate ease-in-out;
+  }
+  @keyframes levitating {
+    0% {
+      transform: translateY(1%);
+    }
+    100% {
+      transform: translateY(-1%);
+    }
+  }
+  .profile-img {
+    width: 250px;
+  }
+  .intro-text {
+    width: 340px;
+  }
+  .intro-title {
+    font-size: 25px;
+  }
+  .intro-subtitle {
+    font-size: 15px;
+  }
+  .buttons {
+    width: 250px;
+    height: 40px;
+  }
+  .about-btn,
+  .blog-btn {
+    padding: 0 10px;
+    text-align: center;
+  }
+  .social-media {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 1rem;
+    height: auto;
+    gap: 1em;
+  }
+  .social-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+  }
+  .social-title {
+    font-size: 26px;
+  }
+  .social-subtitle {
+    font-size: 16px;
+  }
+}

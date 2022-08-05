@@ -1,0 +1,177 @@
+/*  */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 2rem;
+  font-size: 1.1rem;
+  transition: all 200ms;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  margin-bottom: -4em;
+  overflow-x: clip;
+}
+.mobile-nav-toggle{
+  display: none;
+}
+.media-link{
+  position: relative
+}
+.sublink{
+  margin: 10px 0;
+  width: max-content;
+}
+.nav-sublink{
+  position: absolute;
+  padding: 0.5em 3em 0.5em  0.5em;
+  border-radius: 10px;
+  background-color: #064663;
+  color: #fff;
+}
+/* when navbar sticks to the DOM */
+.hover {
+  background-color: #ff9933e6;
+  box-shadow: none;
+  color: black;
+  backdrop-filter: blur(10px);
+}
+
+/* logo contains the text and the lotus image */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-img {
+  object-fit: contain;
+  max-width: 50px;
+}
+.logo-name {
+  font-weight: 600;
+}
+/* navigation panel */
+.nav-container {
+  display: flex;
+  gap: 2rem;
+}
+/* dark/light mode switch */
+.switch-container {
+  border-radius: 20px;
+  width: 50px;
+  height: 25px;
+  background-color: rgb(237, 225, 225);
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 1em;
+}
+.switch-container-dark {
+  position: relative;
+  background-color: rgb(88, 83, 83);
+
+}
+.switch {
+  transition: all 1s;
+  width: 50%;
+  border-radius: 100px;
+  height: 100%;
+  background-color: rgb(253, 97, 0);
+  position: relative;
+  transition: transform 200ms;
+}
+.switch-dark {
+  background-color: rgb(38, 255, 0);
+  border: 1px solid rgb(38, 255, 0);
+  transform: translateX(100%);
+}
+
+/* navigation panel list */
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+.nav-links {
+  cursor: pointer;
+}
+.nav-links:hover {
+  color: #26ff00;
+  /* text-shadow: 0px 0px 0.5px black; */
+}
+.media-link {
+  position: relative;
+}
+
+/* --------------------Mobile responsiveness-------------------- */
+
+@media (min-width: 350px) and (max-width:950px) {
+  /* nav-list responsiveness */
+  .nav-list {
+    flex-direction: column;
+    position: fixed;
+    padding: min(20vh, 10rem) 3em;
+    color: rgb(200, 200, 200);
+    inset: 0 0 0 30%;
+    height: 100vh;
+    transform: translateX(100%);
+    transition: transform 0.2s;
+  }
+  .nav-list-show{
+    transform: translateX(0%);
+  }
+  @supports (backdrop-filter: blur(1rem)) {
+    .nav-list {
+      background-color: #1e375be4;
+      backdrop-filter: blur(1rem);
+     
+    }
+  }
+  .mobile-nav-toggle{
+    display: block;
+    position: absolute;
+    background-color: transparent;
+    width: 2rem;
+    aspect-ratio: 1;
+    border: none;
+    top: 0.1rem;
+    right: 0px;
+    z-index: 999;
+    position: relative;
+  }
+ /* logo responsiveness */
+ .navbar{
+  padding-left: 1em;
+ }
+ .logo-img{
+   width: 30px;
+ }
+ .logo-name{
+   font-size: 20px;
+ }
+ /* switch */
+ .switch-container{
+   width: 40px;
+   height: 20px;
+ }
+ /* toggle button animation */
+ .sr-only{
+   width: 90%;
+   height: 10%;
+   border-radius: 5px;
+   background-color: rgb(33, 220, 4);
+   display: block;
+   margin: 5px auto;
+   transition: all 0.2s;
+  }
+  .sr-only1-clicked{
+    transform: rotate(50deg) translateY(12px);
+
+}
+.sr-only2-clicked{
+  filter: opacity(0);
+}
+  .sr-only3-clicked{
+    transform: rotate(-50deg) translateY(-12px);
+
+}
+}

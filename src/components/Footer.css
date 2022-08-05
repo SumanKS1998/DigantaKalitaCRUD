@@ -1,0 +1,45 @@
+.b2t{
+    background-color: #064663;
+    padding: 1rem 0;
+    text-align: center;
+    color: #fff;
+}
+.b2t>h2{
+    font-weight: 300;
+
+}
+.b2t:hover{
+    background-color: #1a6385;
+}
+.footer-main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    text-align: left;
+    gap: 5em;
+    padding: 1em 2em;
+    background-color: #04293A;
+    color: white;
+}
+.social-icons-footer{
+    margin-top: 1em;
+    width: 40%;
+    display: flex;
+    gap: 1em;
+
+}
+.footer-rights{
+    text-align: center;
+    padding: 2em;
+    background-color: #041C32;
+    color: white;
+}
+hr{
+    border: 1px solid #064663 ;
+}
+.footer-icons{
+    color: #1a6385;
+}
+.footer-icons-dark{
+    color: #fff;
+
+}

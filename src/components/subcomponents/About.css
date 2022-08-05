@@ -1,0 +1,342 @@
+.about-container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 30% 30% 40%;
+  justify-items: center;
+  align-items: center;
+  max-width: 95%;
+  margin: auto;
+  overflow: hidden;
+}
+/* titles */
+.about-title {
+  font-size: 50px;
+}
+.title-english,
+.title-assamese {
+  font-size: 20px;
+  font-weight: 600;
+}
+/* About button */
+.about-page-btn {
+  padding: 0.7em 2em;
+  margin: 2em 0;
+  border-radius: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  position: relative;
+  /* transition: all 0.2s; */
+}
+.about-page-btn:hover {
+  background-color: #ff8812;
+  transition: all 0.2s;
+}
+.about-page-btn:hover .about-btn-blur {
+  width: 100%;
+  height: 100%;
+  right: 10px;
+  bottom: 10px;
+  box-shadow: 0px 0px 5px black;
+  color: #000;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-btn-blur {
+  position: absolute;
+  width: 0px;
+  pointer-events: none;
+  color: transparent;
+  height: 30px;
+  transition: all 0.3s;
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.135);
+  right: -8px;
+  bottom: -10px;
+}
+/* first box */
+.info-container {
+  height: 350px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.034);
+  width: 300px;
+  transition: 0.1s;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+/* content box of info-container */
+.info-container-in {
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2em);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+.info-container:hover {
+  height: 450px;
+}
+/* gradient's animation of box 1 */
+.about-circle-1,
+.about-circle-2 {
+  background: radial-gradient(#b0e633, #53ef7d);
+  width: 150px;
+  height: 150px;
+  border-radius: 999px;
+  position: absolute;
+}
+.about-circle-1-dark,
+.about-circle-2-dark {
+  background: radial-gradient(#ffb9b9, #ff8812);
+}
+.about-circle-1 {
+  animation: flyup1 infinite ease-in-out 5s alternate;
+}
+.about-circle-2 {
+  bottom: -50px;
+  right: -50px;
+  animation: flyup2 infinite ease-in-out 5s alternate;
+}
+/* slide up div of first box and its animation */
+.info-main {
+  width: 100%;
+  background: rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px lightgray;
+  height: 250px;
+  position: absolute;
+  bottom: -60%;
+  border-radius: 20px;
+  transition: all 0.5s;
+  pointer-events: none;
+  text-align: center;
+  padding: 1em;
+  color: rgb(49, 49, 49);
+}
+.info-container:hover .info-main {
+  bottom: -10%;
+}
+.info-container:hover .about-circle-1 {
+  animation: moveCenter1 forwards 0.5s;
+}
+.info-container:hover .about-circle-2 {
+  transform: translate(100%, 100%);
+  transition: all 0.5s;
+}
+.info-container:hover .profile-image {
+  transform: scale(0.8) translate(-60%, 0%);
+}
+.profile-image {
+  width: 150px;
+  border-radius: 999px;
+  margin: 1em;
+  transition: transform 0.5s;
+}
+.info-container-in:hover .info-name {
+  color: #000 !important;
+  transform: translate(55%, -400%);
+}
+.info-name {
+  transition: transform 0.5s;
+}
+.info-container-in:hover .about-icons {
+  transform: translate(50%, -450%);
+}
+.fb-darks:hover {
+  color: #17a9fd !important;
+}
+.insta-darks:hover {
+  color: #bc2a8d !important;
+}
+.twitter-darks:hover {
+  color: #1da1f2 !important;
+}
+.about-icons {
+  transition: transform 0.5s;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.info-main > h3 {
+  margin: 1em;
+  font-weight: 600;
+}
+
+.dash {
+  background-color: lightgray;
+  color: lightgray;
+  padding: none;
+  display: block;
+  height: 5px;
+  width: 30px;
+  margin: 0.2rem auto;
+  border-radius: 10px;
+}
+
+/* second box */
+.about-grid-container {
+  height: 350px;
+  width: 470px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.046);
+  position: relative;
+}
+/* gradient animation of box 2 */
+.about-container-gradient {
+  background-image: linear-gradient(
+    to right,
+    #ff9933,
+    #ff9c7c,
+    #daf3ff,
+    #d7f8ff,
+    #9ff9fb,
+    #66f9e3,
+    #42f6b8,
+    #53ef7d
+  );
+  height: 50%;
+  width: 50%;
+  position: absolute;
+  animation: moveAround alternate infinite linear 20s;
+}
+ 
+/* actual content of box 2 */
+.main-container {
+  height: 100%;
+  backdrop-filter: blur(3em);
+  background-color: rgba(255, 255, 255, 0.135);
+}
+.main-container:hover .greetings {
+  top: 60%;
+}
+.greetings {
+  transition: all 0.5s;
+  position: absolute;
+  top: 140%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: left;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0px 0px 5px lightgray;
+  height: 350px;
+  padding: 0 3rem;
+  text-align: justify;
+  color: #000;
+}
+
+.greetings-dash {
+  width: 50px;
+  height: 5px;
+  background-color: rgb(206, 201, 201);
+  border-radius: 10px;
+  margin: 1rem auto;
+}
+
+/* animation for second gradient  */
+@keyframes moveAround {
+  0% {
+    transform: translate(5%, 5%);
+  }
+  30% {
+    transform: translate(95%, 95%);
+  }
+  60% {
+    transform: translate(95%, 5%);
+  }
+  100% {
+    transform: translate(5%, 95%);
+  }
+}
+.quotes-box {
+  width: 80%;
+  padding: 2em 3em;
+}
+.quotes {
+  font-weight: 600;
+}
+.about-image {
+  position: absolute;
+  width: 350px;
+  right: -40px;
+  bottom: 0px;
+}
+
+/* animation of first gradient */
+/* when hovered */
+@keyframes moveCenter1 {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+    border-radius: 999px;
+    width: 100%;
+    height: 100%;
+    margin: none;
+  }
+}
+/* when unHovered */
+@keyframes flyup1 {
+  0% {
+    top: -30px;
+    left: -30px;
+  }
+  100% {
+    top: -50px;
+    left: -50px;
+  }
+}
+@keyframes flyup2 {
+  0% {
+    bottom: -30px;
+    right: -30px;
+  }
+  100% {
+    bottom: -50px;
+    right: -50px;
+  }
+}
+/* ------------Mobile Responsiveness------------ */
+@media (min-width:350px) and (max-width:900px) {
+  /* ----first box and the titles---- */
+  .about-container{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    gap: 1em;
+    padding-bottom: 3em;
+  }
+  .about-title{
+    font-size: 26px;
+  }
+  .title-english,.title-assamese{
+    font-size: 16px;
+  }
+  .about-page-btn{
+    margin: 1em auto;
+  }
+  /* ----second box---- */
+  .about-grid-container{
+    width: 300px;
+  }
+  .quotes-box{
+    width: 100%;
+  }
+  .quotes{
+    width: 100%;
+    font-size: 16px;
+  }
+}
